@@ -19,6 +19,7 @@ default_replacements = [
     ("the image is", ""),
     ("in this image", ""),
     ("in the image", ""),
+    ("gigi hadid", "a woman"),
 ]
 
 def clean_caption(cap: str, replacements=None) -> str:
@@ -80,7 +81,7 @@ torch.set_float32_matmul_precision("high")
 OVERWRITE = True          # Разрешаем перезапись существующих .txt файлов
 PREPEND_STRING = ""       # Строка, добавляемая перед основным текстом
 APPEND_STRING = ""        # Строка, добавляемая после основного текста
-BATCH_SIZE = 4            # Размер батча при генерации описаний
+BATCH_SIZE = 5            # Размер батча при генерации описаний
 PRINT_PROCESSING_STATUS = False  # Печатать статус обработки
 PRINT_CAPTIONS = False           # Печатать подписи в консоль
 DETAIL_MODE = 2                 # Уровень детализации подписи (используется во Florence-2)
